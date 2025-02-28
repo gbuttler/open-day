@@ -3,6 +3,7 @@ import { uniJSON } from "./pages/OpenDay";
 import { welcomePage } from "./pages/welcome-page";
 import { aToZSort } from "./pages/a-z-sort";
 import { popUp } from "./pages/pop-up";
+import { generalSort } from "./pages/general-sort";
 
 let mainContent = document.querySelector(".main-content");
 
@@ -19,6 +20,12 @@ mainTitle.addEventListener("click", function () {
 let aToZButton = document.getElementById("a-z-button");
 aToZButton.addEventListener("click", function () {
   aToZSort();
+});
+
+//add function to general sort button
+let generalButton = document.getElementById("general-button");
+generalButton.addEventListener("click", function () {
+  generalSort();
 });
 
 export { mainContent };
