@@ -1,5 +1,14 @@
 # Open Day
 
+### Future Ideas
+
+- Have the 'Cymraeg' button actually translate to Welsh.
+- Use the provided coordinates to show a pin on google maps.
+- Improved mobile compatability.
+- Menu button would let you access the University Website Menu
+- Allow a further filter for individual letters (e.g. A, D)
+- Add in a search bar to enable users to find the desired subject more quickly.
+
 ### Steps
 
 - Create some small pieces of code to test CSS styles, fonts and colours.
