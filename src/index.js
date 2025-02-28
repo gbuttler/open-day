@@ -4,6 +4,7 @@ import { welcomePage } from "./pages/welcome-page";
 import { aToZSort } from "./pages/a-z-sort";
 import { popUp } from "./pages/pop-up";
 import { generalSort } from "./pages/general-sort";
+import { suSort } from "./pages/su-sort";
 
 let mainContent = document.querySelector(".main-content");
 
@@ -28,4 +29,9 @@ generalButton.addEventListener("click", function () {
   generalSort();
 });
 
+//add function to su sort button
+let suButton = document.getElementById("su-button");
+suButton.addEventListener("click", function () {
+  suSort();
+});
 export { mainContent };
