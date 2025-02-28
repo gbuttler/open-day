@@ -2,6 +2,8 @@ import { uniJSON } from "./OpenDay";
 import { mainContent } from "../index.js";
 
 const welcomePage = () => {
+  mainContent.innerHTML = "";
+
   let welcomeDiv = document.createElement("div");
   welcomeDiv.classList.add("welcome-div");
   let welcomePara = document.createElement("p");
