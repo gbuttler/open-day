@@ -5,7 +5,7 @@ let popUpDiv = document.querySelector(".inner-pop-up");
 
 const popUp = (newEntry) => {
   console.log("pop-up clicked");
-
+  window.scrollTo(0, 0);
   //empty of current information
   popUpDiv.innerHTML = "";
 
