@@ -26,7 +26,7 @@ suArray.sort((a, b) => a.title.localeCompare(b.title));
 
 //page display
 const suSort = () => {
-  console.log("general button clicked");
+  console.log("su button clicked");
   mainContent.innerHTML = "";
 
   let suList = document.createElement("div");
