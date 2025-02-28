@@ -1,14 +1,28 @@
 import { uniJSON } from "./OpenDay";
 import { mainContent } from "../index.js";
 
+let popUpDiv = document.querySelector(".inner-pop-up");
+
 const popUp = (newEntry) => {
   console.log("pop-up clicked");
 
-  //get the pop-up div
-  let popUpDiv = document.querySelector(".inner-pop-up");
+  //empty of current information
+  popUpDiv.innerHTML = "";
+
+  //bring to the front
   popUpDiv.style.zIndex = "3";
-  //have a loop within a loop to select topics and programs (1 index for topics and 1 for the items within programs)
-  // get all the data and use document.createElement
+
+  //close button
+  let closeDiv = document.createElement("div");
+  closeDiv.classList.add("close-div");
+  popUpDiv.appendChild(closeDiv);
+  let closePopButton = document.createElement("button");
+  closePopButton.innerHTML = "X";
+  closePopButton.classList.add("close-pop-up");
+  closePopButton.addEventListener("click", function () {
+    popUpDiv.style.zIndex = "-2";
+  });
+  closeDiv.appendChild(closePopButton);
 
   //title
   let pTitle = document.createElement("h3");
