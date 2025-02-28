@@ -1,5 +1,6 @@
 import { uniJSON } from "./OpenDay.js";
 import { mainContent } from "../index.js";
+import { popUp } from "./pop-up.js";
 
 //create array containing only data we want for this page
 let aToZArray = [];
@@ -12,6 +13,12 @@ for (let i = 0; i < uniJSON.topics.length; i++) {
       start_time: uniJSON.topics[i].programs[j].start_time.slice(10),
       end_time: uniJSON.topics[i].programs[j].end_time.slice(10),
       description_short: uniJSON.topics[i].programs[j].description_short,
+      image: uniJSON.topics[i].programs[j].location.cover_image,
+      description_long: uniJSON.topics[i].programs[j].description,
+      address: uniJSON.topics[i].programs[j].location.address,
+      postcode: uniJSON.topics[i].programs[j].location.postcode,
+      website: uniJSON.topics[i].programs[j].location.website,
+      room: uniJSON.topics[i].programs[j].room,
     };
     aToZArray.push(newEntry);
   }
@@ -80,6 +87,10 @@ const aToZSort = () => {
     let viewButton = document.createElement("button");
     viewButton.classList.add("view-button");
     viewButton.innerHTML = "View";
+    viewButton.addEventListener("click", function () {
+      popUp(newEntry);
+    });
+
     entryDiv.appendChild(viewButton);
     aToZList.appendChild(entryDiv);
   });

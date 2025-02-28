@@ -163,3 +163,80 @@ h3 {
   align-self: center;
   justify-self: center;
 }
+
+/* individual pop ups  */
+
+.pop-up {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.inner-pop-up {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  z-index: -2;
+  visibility: visible;
+  border: 1px solid var(--silver);
+}
+
+.close-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.close-pop-up {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.close-pop-up p {
+  padding-left: 7px;
+  font-size: 15px;
+}
+
+.close-pop-up:hover {
+  color: var(--red);
+  background-color: white;
+}
+
+.inner-pop-up .event-image {
+  max-width: 300px;
+}
+
+.inner-pop-up .event-start {
+  display: flex;
+  align-items: center;
+}
+
+.inner-pop-up h4 {
+  padding-right: 5px;
+}
+
+.inner-pop-up .event-end {
+  display: flex;
+  align-items: center;
+}
+
+.inner-pop-up .event-desc {
+  max-width: 70vw;
+  padding: 10px;
+}
+
+.inner-pop-up .event-location {
+  display: flex;
+  align-items: center;
+}

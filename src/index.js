@@ -2,6 +2,7 @@ import "./styles.css";
 import { uniJSON } from "./pages/OpenDay";
 import { welcomePage } from "./pages/welcome-page";
 import { aToZSort } from "./pages/a-z-sort";
+import { popUp } from "./pages/pop-up";
 
 let mainContent = document.querySelector(".main-content");
 
