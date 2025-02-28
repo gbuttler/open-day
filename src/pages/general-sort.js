@@ -34,7 +34,7 @@ const generalSort = () => {
 
   //Set heading (h3)
   let generalTitle = document.createElement("h3");
-  generalTitle.innerHTML = "A to Z of events";
+  generalTitle.innerHTML = "General events";
   generalList.appendChild(generalTitle);
 
   generalArray.forEach((newEntry, k) => {

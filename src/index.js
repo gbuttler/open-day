@@ -5,6 +5,7 @@ import { aToZSort } from "./pages/a-z-sort";
 import { popUp } from "./pages/pop-up";
 import { generalSort } from "./pages/general-sort";
 import { suSort } from "./pages/su-sort";
+import { sportSort } from "./pages/sport-sort";
 
 let mainContent = document.querySelector(".main-content");
 
@@ -34,4 +35,11 @@ let suButton = document.getElementById("su-button");
 suButton.addEventListener("click", function () {
   suSort();
 });
+
+//add function to su sort button
+let sportButton = document.getElementById("sport-button");
+sportButton.addEventListener("click", function () {
+  sportSort();
+});
+
 export { mainContent };

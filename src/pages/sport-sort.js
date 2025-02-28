@@ -2,42 +2,42 @@ import { uniJSON } from "./OpenDay";
 import { mainContent } from "../index.js";
 import { popUp } from "./pop-up";
 
-let suArray = [];
+let sportArray = [];
 
-for (let i = 0; i < uniJSON.topics[1].programs.length; i++) {
+for (let i = 0; i < uniJSON.topics[2].programs.length; i++) {
   const newEntry = {
-    id: uniJSON.topics[1].programs[i].id,
-    title: uniJSON.topics[1].programs[i].title,
-    start_time: uniJSON.topics[1].programs[i].start_time.slice(10),
-    end_time: uniJSON.topics[1].programs[i].end_time.slice(10),
-    description_short: uniJSON.topics[1].programs[i].description_short,
-    image: uniJSON.topics[1].programs[i].location.cover_image,
-    description_long: uniJSON.topics[1].programs[i].description,
-    address: uniJSON.topics[1].programs[i].location.address,
-    postcode: uniJSON.topics[1].programs[i].location.postcode,
-    website: uniJSON.topics[1].programs[i].location.website,
-    room: uniJSON.topics[1].programs[i].room,
+    id: uniJSON.topics[2].programs[i].id,
+    title: uniJSON.topics[2].programs[i].title,
+    start_time: uniJSON.topics[2].programs[i].start_time.slice(10),
+    end_time: uniJSON.topics[2].programs[i].end_time.slice(10),
+    description_short: uniJSON.topics[2].programs[i].description_short,
+    image: uniJSON.topics[2].programs[i].location.cover_image,
+    description_long: uniJSON.topics[2].programs[i].description,
+    address: uniJSON.topics[2].programs[i].location.address,
+    postcode: uniJSON.topics[2].programs[i].location.postcode,
+    website: uniJSON.topics[2].programs[i].location.website,
+    room: uniJSON.topics[2].programs[i].room,
   };
-  suArray.push(newEntry);
+  sportArray.push(newEntry);
 }
 
 //sort general array a-z
-suArray.sort((a, b) => a.title.localeCompare(b.title));
+sportArray.sort((a, b) => a.title.localeCompare(b.title));
 
 //page display
-const suSort = () => {
+const sportSort = () => {
   console.log("general button clicked");
   mainContent.innerHTML = "";
 
-  let suList = document.createElement("div");
-  suList.classList.add("a-z-div");
+  let sportList = document.createElement("div");
+  sportList.classList.add("a-z-div");
 
   //Set heading (h3)
-  let suTitle = document.createElement("h3");
-  suTitle.innerHTML = "Student's Union events";
-  suList.appendChild(suTitle);
+  let sportTitle = document.createElement("h3");
+  sportTitle.innerHTML = "Sport events";
+  sportList.appendChild(sportTitle);
 
-  suArray.forEach((newEntry, k) => {
+  sportArray.forEach((newEntry, k) => {
     let entryDiv = document.createElement("div");
     entryDiv.classList.add("indiv-entry-div");
 
@@ -89,11 +89,11 @@ const suSort = () => {
     });
 
     entryDiv.appendChild(viewButton);
-    suList.appendChild(entryDiv);
+    sportList.appendChild(entryDiv);
   });
 
   //append to main content
-  mainContent.appendChild(suList);
+  mainContent.appendChild(sportList);
 };
 
-export { suSort, suArray };
+export { sportSort, sportArray };
