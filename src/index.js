@@ -8,6 +8,12 @@ let mainContent = document.querySelector(".main-content");
 //load welcome page from start
 welcomePage();
 
+//return to welcome page when main title is clicked
+let mainTitle = document.getElementById("main-title");
+mainTitle.addEventListener("click", function () {
+  welcomePage();
+});
+
 //add function to a-z sort button
 let aToZButton = document.getElementById("a-z-button");
 aToZButton.addEventListener("click", function () {
