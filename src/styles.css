@@ -1,0 +1,84 @@
+:root {
+  --red: #e4251b;
+  --silver: #cccccc;
+  font-family: "Open Sans", serif;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--silver);
+}
+
+/* header */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Libre Franklin", serif;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--silver);
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-menu:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.header-menu i {
+  font-size: 20px;
+}
+
+.header-menu p {
+  padding-left: 7px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header button {
+  background-color: white;
+  border: 1px solid var(--silver);
+  height: fit-content;
+  padding: 13px;
+  font-family: "Libre Franklin", serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* menu  */
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--silver);
+}
+
+.menu button {
+  border: none;
+  background-color: white;
+  font-family: "Libre Franklin", serif;
+  font-size: 17px;
+  margin: 3px;
+  padding: 5px;
+}
+
+.menu button:hover {
+  background-color: var(--silver);
+}
+
+/* main body  */
+
+h1 {
+  font-family: "Libre Franklin", serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+}
