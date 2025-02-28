@@ -7,6 +7,7 @@ import { generalSort } from "./pages/general-sort";
 import { suSort } from "./pages/su-sort";
 import { sportSort } from "./pages/sport-sort";
 import { resSort } from "./pages/residences-sort";
+import { subjectSort } from "./pages/subject-sort";
 
 let mainContent = document.querySelector(".main-content");
 
@@ -43,9 +44,16 @@ sportButton.addEventListener("click", function () {
   sportSort();
 });
 
+//add function to residential sort button
 let resButton = document.getElementById("res-button");
 resButton.addEventListener("click", function () {
   resSort();
+});
+
+//add function to subject sort button
+let subjectButton = document.getElementById("subject-button");
+subjectButton.addEventListener("click", function () {
+  subjectSort();
 });
 
 export { mainContent };
